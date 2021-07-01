@@ -18,9 +18,9 @@ AFRAME.registerComponent("card", {
         },
         sound: {},
     },
-    init: function() {
-        var data = this.data;
-        var el = this.el;
+    init: () => {
+        let data = this.data;
+        let el = this.el;
 
         // Create geometry.
         this.geometry = new THREE.BoxBufferGeometry(
@@ -40,9 +40,9 @@ AFRAME.registerComponent("card", {
         // Set mesh on entity.
         el.setObject3D("mesh", this.mesh);
     },
-    update: function(oldData) {
-        var data = this.data;
-        var el = this.el;
+    update: (oldData) => {
+        let data = this.data;
+        let el = this.el;
         // If `oldData` is empty, then this means we're in the initialization process.
         // No need to update.
         if (Object.keys(oldData).length === 0) {

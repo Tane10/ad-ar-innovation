@@ -4,9 +4,10 @@
 <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
-    <title> Am Ads AR inovation tests </title>
+    <!-- <title> Am Ads AR inovation tests </title> -->
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="js/components/card.component.js"></script>
+    <script src="js/components/ad-control.component.js"></script>
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
@@ -35,15 +36,18 @@
 
     <a-scene embedded arjs>
         <a-assets>
-            <audio id="ad-default-script" src="https://media-dev.amillionads.com/AdlGnkE0iYLs0oW.kfdQaMwj.mp3" preload="auto"></audio>
+            <audio id="ad-default-script" src="https://media-dev.amillionads.com/AdlGnkE0iYLs0oW.kfdQaMwj.mp3"></audio>
         </a-assets>
 
-        <a-marker preset="hiro">
-            <a-entity id="ad-audio" position="0 0 0" sound="src: #ad-default-script; autoplay: true">
-                <a-entity card="width: 2; height: 0.05; depth: 1; color: red" position="0 0 0"></a-entity>
-            </a-entity>
 
-        </a-marker>
+        <a-entity id="ad-audio" position="0 0 0" sound="src: #ad-default-script;">
+            <a-plane id="ad-card" width="2" height="2" depth="1" color="red" position="0 0 0" ad-player></a-box>
+        </a-entity>
+
+        <!-- <a-marker preset="hiro">
+
+         
+        </a-marker> -->
 
         <a-camera user-height="1.6"></a-camera>
     </a-scene>
