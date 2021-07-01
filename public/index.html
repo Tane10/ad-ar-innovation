@@ -39,15 +39,15 @@
             <audio id="ad-default-script" src="https://media-dev.amillionads.com/AdlGnkE0iYLs0oW.kfdQaMwj.mp3"></audio>
         </a-assets>
 
+        <a-marker id="marker" preset="hiro">
+            <a-entity id="ad-audio" position="0 0 0" sound="src: #ad-default-script;">
+                <a-box id="ad-card" width="1" height="1ss" depth="1" color="red" position="0 0 0" ad-player></a-box>
+            </a-entity>
+        </a-marker>
 
-        <a-entity id="ad-audio" position="0 0 0" sound="src: #ad-default-script;">
-            <a-plane id="ad-card" width="2" height="2" depth="1" color="red" position="0 0 0" ad-player></a-box>
-        </a-entity>
-
-        <!-- <a-marker preset="hiro">
-
-         
-        </a-marker> -->
+        <a-marker id="sunny-marker" type="pattern" url="markers/pattern-sun_marker.patt">
+            <a-box id="ad-card" width="1" height="1ss" depth="1" color="yellow" position="0 0 0" ad-player></a-box>
+        </a-marker>
 
         <a-camera user-height="1.6"></a-camera>
     </a-scene>

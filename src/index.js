@@ -24,7 +24,8 @@ app.options("*", cors(options)); //enable pre-flight
 
 // This root is needed if you want to run this in the cloud
 router.get("/", async(req, res) => {
-    res.sendFile(path.join(__dirname, "/index.html"));
+    // res.sendFile(path.join(__dirname, "/index.html"));
+    res.send("hey");
 });
 
 try {
