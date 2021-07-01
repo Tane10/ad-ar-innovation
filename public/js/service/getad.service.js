@@ -22,4 +22,4 @@ let getScript = async(keyWord) => {
     }
 };
 
-module.exports = getScript;
+module.exports = { getScript };
